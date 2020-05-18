@@ -3,17 +3,35 @@ title: '[教學] 使用github.io以及Hexo搭建自己的部落格'
 tags:
 ---
 
-# 標題一
+## 建立 GitHub Pages
 
-## 標題二
+### 註冊 GitHub 帳號
 
-### 標題三
+### 新增 GitHub Pages
 
-#### 標題四
+## Hexo 環境架設
 
-##### 標題五
+### 環境配置
+* Node.js
+* Git
+* Notepad++
 
-###### 標題六
+### 安裝 Hexo
+
+### 設定部落格資訊
+
+### 部屬至 GitHub
+
+## 上傳部落格資源
+
+### Git 初始化
+
+### 創立新分支
+
+### gitignore
+
+### commit 和 push
+
 
 **這是加粗**
 
