@@ -100,4 +100,4 @@ theme: landscape
 deploy:
   type: git
   repo: git@github.com:andrewliang25/andrewliang25.github.io.git
-  branch: master
+  branch: blog_deploy
