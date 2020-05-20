@@ -93,11 +93,11 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: jekyll-theme-midnight
+theme: Midnight
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
   repo: git@github.com:andrewliang25/andrewliang25.github.io.git
-  branch: blog_deploy
+  branch: master
