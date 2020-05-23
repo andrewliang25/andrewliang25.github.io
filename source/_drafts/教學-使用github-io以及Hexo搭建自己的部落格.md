@@ -5,7 +5,7 @@ tags:
 
 ## **建立 GitHub Pages**
 
-### 註冊 GitHub 帳號
+### Register at Github
 先至{% link GitHub https://github.com/ %}註冊帳號
 
 ### 新增 GitHub Pages

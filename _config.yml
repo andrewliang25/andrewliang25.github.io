@@ -8,7 +8,7 @@ subtitle: 隨手筆記
 description: ''
 keywords:
 author: Andrew Liang
-language: zh-TW
+language: en
 timezone: 
 
 # URL
@@ -41,7 +41,7 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
