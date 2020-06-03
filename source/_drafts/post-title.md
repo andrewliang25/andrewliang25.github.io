@@ -1,6 +1,5 @@
 ---
 title: post title
-date: 2020-05-20 17:31:45
 tags:
 ---
 
