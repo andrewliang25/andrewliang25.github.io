@@ -13,9 +13,9 @@ First, Go to {% link GitHub https://github.com/ %} and sign up.
 
 Click "Start a project".
 {% asset_img start_project.png %}
-Name it `username.github.io` and click "Create repository".
+Name it `<username>.github.io` and click "Create repository".
 {% asset_img github_create_repo.png %}
-+ **Note: replace "username" with your own username.**
++ **Note: replace <username> with your own username.**
 
 
 ## Choose theme for GitHub Pages
