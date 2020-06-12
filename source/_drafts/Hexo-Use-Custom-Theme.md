@@ -9,3 +9,10 @@ tags:
 
 ## Git Submodule
 
+
+
+# Known Issues
+
+## Blank Website
+
+### Check if theme folder is not empty

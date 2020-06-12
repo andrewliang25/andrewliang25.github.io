@@ -9,7 +9,8 @@ tags:
 
 ## Set up access key for repo
 
-### Generate keys
+### Generate SSH keys
+Open terminal and generate SSH keys by following command.
 ```
 ssh-keygen -f github-deploy-key
 ```
@@ -21,9 +22,12 @@ blog repo → settings → Deploy keys → add deploy key
 ## Build new workflow in github action
 
 ### Create a workflow
-**Set source branch as default**
+Fisrt, set source branch as default
+**Note: the workflow file will be created under default branch.**
+**Make sure "source branch" has been set as default branch.**
 Action ->  new workflow -> set up a workflow yourself
 ### Modify main.yml
+Replace with codes below.
 ```
 name: HEXO CI
 
@@ -65,12 +69,15 @@ jobs:
         run: |
           hexo generate && hexo deploy
 ```
-### Commit to master
-**Note: .github/workflows/main.yml will be created under default branch (master).**
-**Make sure "source branch" has been set as default branch.**
+Hexo CI creates a Virtual Machine and deploy website for you.
+
+### Commit to default branch
+
+Click commit.
 
 ### Set up Hexo config
 http -> ssh
+Open "_config.yml" and change git repositary from http form into ssh form.
 
 # Known Issues
 
@@ -86,9 +93,7 @@ http -> ssh
 
 ### Allow write access on Public Key
 
-## Blank Website
-
-### Set deploy branch as default branch
 
 > Reference
-> Winnie's Blog: https://op30132.github.io/2020/02/05/github-action/
+> https://help.github.com/en/actions
+> https://op30132.github.io/2020/02/05/github-action/
