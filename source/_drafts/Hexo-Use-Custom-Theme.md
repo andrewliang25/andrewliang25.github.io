@@ -13,6 +13,10 @@ tags:
 
 # Known Issues
 
-## Blank Website
+### Blank Website
 
-### Check if theme folder is not empty
+* Check if theme folder is not empty
+
+### Template Render Error while generating
+
+* Update Hexo to latest version

@@ -9,10 +9,10 @@
     "server": "hexo server"
   },
   "hexo": {
-    "version": "3.3.1"
+    "version": "4.2.1"
   },
   "dependencies": {
-    "hexo": "^3.3.1",
+    "hexo": "^4.2.1",
     "hexo-browsersync": "^0.3.0",
     "hexo-deployer-git": "^2.1.0",
     "hexo-generator-archive": "^1.0.0",
