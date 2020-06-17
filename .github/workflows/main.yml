@@ -34,6 +34,10 @@ jobs:
         run: |
           npm i -g hexo-cli
           npm i
+      - name: Checkout submodules
+        uses: srt32/git-actions@v0.0.3
+        with:
+          args: git submodule update --init --recursive
       - name: Deploy hexo
         run: |
           hexo clean && hexo generate && hexo deploy
