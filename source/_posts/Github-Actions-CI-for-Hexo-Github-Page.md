@@ -4,9 +4,6 @@ date: 2020-06-15 18:48:36
 tags:
 ---
 
-
-# Lets start it
-
 **Note: Already Built GitHub Pages with Hexo**
 
 ## Set up access key for repo
@@ -17,6 +14,9 @@ Open terminal and generate SSH keys by following command.
 ssh-keygen -f github-deploy-key
 ```
 Skip passphrase.
+
+<!-- more -->
+
 {% asset_img sshkeygen.png SSH key generated on terminal %}
 After generating, there should be 2 files.
 {% asset_img keyfile.png Private Key & Public Key %}
@@ -106,13 +106,13 @@ Deploy branch should be "master".
 
 # Known Issues
 
-### CI does not tiggered after push
+## CI does not tiggered after push
 
 * Check if source branch is set as trigger branch in main.yml
 * Check if .github/workflows/main.yml locates under source branch
 {% asset_img pushTriggerCheck.png Check branch %}
 
-### CI deploy hexo failed with no access
+## CI deploy hexo failed with no access
 
 * Make sure keys are entered correctly
 * Allow write access on Public Key

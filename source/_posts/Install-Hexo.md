@@ -12,6 +12,7 @@ tags:
 * {% link Git https://git-scm.com/ %}
 * {% link Notepad++ https://notepad-plus-plus.org/ %}( or any editor you prefer)
 
+<!-- more -->
 
 ## Install Hexo and Initailization
 Install with the cammand below.

@@ -7,7 +7,10 @@ tags:
 ## Register at GitHub
 
 First, Go to {% link GitHub https://github.com/ %} and sign up.
+
 {% asset_img github_signup.png %}
+
+<!-- more -->
 
 ## Create a Repository
 
@@ -26,8 +29,3 @@ Scroll down for "GitHub Pages", and then click "choose a theme".
 {% asset_img github_choose_theme.png %}
 Pick a theme you like!
 {% asset_img github_select_theme.png %}
-
-
-## Next Step
-
-### Install Hexo
