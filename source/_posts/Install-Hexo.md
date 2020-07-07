@@ -15,7 +15,7 @@ tags:
 <!-- more -->
 
 ## Install Hexo and Initailization
-Install with the cammand below.
+Install with the command below.
 ```
 npm install -g hexo-cli
 ```
