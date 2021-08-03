@@ -118,7 +118,7 @@ Deploy branch should be "master".
 * Allow write access on Public Key
 {% asset_img checkDeployKeyAccess.png Check deploy key access %}
 
-## CI deploy hexo failed with TypeError: line.matchAll is not a function
+## Deploy hexo failed with TypeError: line.matchAll is not a function
 
 * Using node.js version above 12.0
 {% asset_img usingNodeVersionAbove12.png Check if node-version later than 12.0 %}
