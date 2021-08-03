@@ -40,4 +40,4 @@ jobs:
           args: git submodule update --init --recursive
       - name: Deploy hexo
         run: |
-          hexo g -d
+          hexo clean && hexo generate && hexo deploy
