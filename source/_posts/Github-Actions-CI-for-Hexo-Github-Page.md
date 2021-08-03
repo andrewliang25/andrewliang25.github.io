@@ -65,7 +65,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [10.x]
+        node-version: [14.x]
 
     steps:
       - uses: actions/checkout@v1
@@ -80,7 +80,7 @@ jobs:
           HEXO_DEPLOY_PRI: ${{secrets.HEXO_DEPLOY_PRI}}
         run: |
           mkdir -p ~/.ssh/
-          echo "$HEXO_DEPLOY_PRI" | tr -d '\r' > ~/.ssh/id_rsa
+          echo "$HEXO_DEPLOY_PRI" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan github.com >> ~/.ssh/known_hosts
           git config --global user.name "<username>"
@@ -91,7 +91,7 @@ jobs:
           npm i
       - name: Deploy hexo
         run: |
-          hexo generate && hexo deploy
+          hexo clean && hexo generate && hexo deploy
 ```
 **Note: Hexo CI creates a Virtual Machine and deploy website for you.**
 
@@ -117,6 +117,11 @@ Deploy branch should be "master".
 * Make sure keys are entered correctly
 * Allow write access on Public Key
 {% asset_img checkDeployKeyAccess.png Check deploy key access %}
+
+## CI deploy hexo failed with TypeError: line.matchAll is not a function
+
+* Using node.js version above 12.0
+{% asset_img usingNodeVersionAbove12.png Check if node-version later than 12.0 %}
 
 > Reference
 > https://help.github.com/en/actions
