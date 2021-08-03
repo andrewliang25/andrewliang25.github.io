@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [10.x]
+        node-version: [14.x]
 
     steps:
       - uses: actions/checkout@v1
@@ -40,4 +40,4 @@ jobs:
           args: git submodule update --init --recursive
       - name: Deploy hexo
         run: |
-          hexo clean && hexo generate && hexo deploy
+          hexo g -d
