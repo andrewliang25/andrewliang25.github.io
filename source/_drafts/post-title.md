@@ -3,34 +3,38 @@ title: post title
 tags:
 ---
 
-# 標題一
+# Heading level 1
 
-## 標題二
+## Heading level 2
 
-### 標題三
+### Heading level 3
 
-#### 標題四
+#### Heading level 4
 
-##### 標題五
+##### Heading level 5
 
-###### 標題六
+###### Heading level 6
 
-**這是加粗**
+**bold text**
 
-*這是斜體*
+*Italicized text*
 
 ~~這是橫線~~
 
-* 無序列表
-* 無序列表
+- Unordered List
++ Unordered List
 
-1. 有序列表1
-2. 有序列表2
+1. Ordered List 1
+2. Ordered List 2
 
-`內嵌代碼`
+`code`
 
 ```
-代碼塊
+code block
 ```
 
-> 引用
+{% asset_img "image file name" "Alternative text" %}
+
+> Blockquotes
+> reference
+> https://www.markdownguide.org/basic-syntax/
