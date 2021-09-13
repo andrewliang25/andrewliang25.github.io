@@ -6,13 +6,15 @@ tags:
 
 ## Prologue
 
-As a web developer, it is common to use localhost to preview the blog. But still something weird came up: browser forcing the path go https. This article just record how to get rid of it.
+As a web developer, it is common to use localhost to preview the blog.
+But still something weird came up: browser forcing the path go https.
+This article just record how to get rid of it.
 <!-- more -->
 
 
 ## The Problem
 
-After entering `http://localhost:4000/`, browser automatically redirect to `https://localhost:4000/`. And show error code: `ERR_SSL_PROTOCOL_ERROR`.
+After entering `http://localhost:4000/`, browser automatically using https, which looks like `https://localhost:4000/`. And show error code: `ERR_SSL_PROTOCOL_ERROR`.
 
 The situation mainly cause from HTTP Strict Transport Security. If you ever visited a website through https, the browser will remember it. And next time you visit the same domain, browser automatically use https to make connection safer.
 
@@ -34,12 +36,12 @@ In my browser, `github.com` is forced https.
 
 ### Microsoft Edge
 
-Same as Google Chome insted of entering `edge://net-internals/#hsts`.
+Enter `edge://net-internals/#hsts` instead. Everything else is the same. 
 
 
 ### Firefox
 
-Delete history and all fine.
+Delete history and all be fine.
 
 
 > Reference
