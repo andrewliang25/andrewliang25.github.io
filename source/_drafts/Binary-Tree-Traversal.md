@@ -4,6 +4,8 @@ tags:
 ---
 ## Prologue
 
+<!-- more -->
+
 ## Preorder Traversal
 
 ## Inorder Traversal
