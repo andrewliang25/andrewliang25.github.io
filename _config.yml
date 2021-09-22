@@ -107,3 +107,10 @@ deploy:
 # Sitemap
 sitemap:
   path: sitemap.xml
+  
+# Google Adsense:
+google_adsense:
+  enable: true
+  google_ad_client_id: ca-pub-4840065274538124
+  sidebar_enable: true
+  sidebar_data_ad_slot: 5935856066
