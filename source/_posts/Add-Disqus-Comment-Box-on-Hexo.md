@@ -1,7 +1,9 @@
 ---
 title: Add Disqus Comment Box on Hexo
+date: 2021-09-24 14:35:00
 tags:
 ---
+
 
 ## Prologue
 
@@ -11,6 +13,8 @@ Disqus is a global comment system that improves discussion on websites and conne
 
 Create an account and log into {% link Disqus https://disqus.com/ %}. Once logged in, click the `GET STARTED` button on the homepage.
 {% asset_img DisqusGetStarted.png GET STARTED %}
+
+<!-- more -->
 
 Then select `I want to install Disqus on my site` option and you will see the `Create a new site` interface.
 {% asset_img installDisqusOnMySite.png install Disqus on my site %}
