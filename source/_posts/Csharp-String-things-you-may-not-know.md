@@ -1,7 +1,9 @@
 ---
 title: C# String - things you may not know
+date: 2021-12-10 23:17:43
 tags:
 ---
+
 
 We use `string` very often in programming. `"A" + "B"`, such things like this.
 But have you ever think about that is `string` maybe not value type?
