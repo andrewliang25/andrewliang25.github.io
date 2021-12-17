@@ -3,61 +3,75 @@ title: Install Arrow OS on Redmi K40
 tags:
 ---
 
-# INSTALLATION PROCEDURE:
+This tutorial is mainly for Xiaomi Poco F3 / Xiaomi Mi 11X / Redmi K40.
+If your phone is not the model above, you will need the ROM that fit the device.
+But main steps still remain same.
+
+**This may wipe out all personal data in the device, so backup!**
+
+<!-- more -->
 
 ## Preparation
 
-SDK Platform Tools (adb/fastboot tools):
++ SDK Platform Tools (or any adb/fastboot tool you prefer):
 https://developer.android.com/studio/releases/platform-tools
 
-Unlock Xiaomi Device:
++ FastbootEnhance (or any Payload Dumper you prefer):
+https://github.com/libxzr/FastbootEnhance/releases
+
++ Unlock Xiaomi Device:
 1. Enable Developer Options
 2. Settings> Additional Settings> Developer Options> My Unlock Status
 3. Login Xiaomi account under 4G LTE connection
-4. Wait 168 hours (or bypass waiting time using modified Mi unlock tool)
-5. Unlock device from Mi Unlock Tool
+4. Wait 168 hours (or bypass waiting time using modified Mi Unlock Tool)
+5. Unlock device from Mi Unlock Tool (you can try unlock to check if the device is under waiting time)
 
 ## First installation (Clean flash):
 
-You need adb/fastboot tools.
-Download boot, vendor_boot and rom zip:
-https://drive.google.com/file/d/1o-4T4hfEtxECIss-DVSSYAM1Kvy2iDN9/view?usp=sharing
-https://drive.google.com/file/d/1PgtI8bOV1yjmTZJ7euP6xDFzMszY6AXb/view?usp=sharing
+Make sure you have unlocked the phone, or may brick it.
+
+Download ArrowOS ROM zip for Xiaomi Poco F3 / Xiaomi Mi 11X / Redmi K40:
 https://arrowos.net/download/alioth
+Vanilla Build present the cleanest OS and GApps Build pre-install Google apps and services.
 
-Reboot in fastboot. Flash arrowos recovery (boot.img and vendor_boot.img):
+Extract image `boot` and `vendor_boot` from ROM zip with Payload Dumper.
+{% asset_img partitionsUnderPayloadDumper.png Partitions under Payload Dumper %}
 
+Reboot in fastboot (press and hold volumn down and power button at same time when phone is power off).
+{% asset_img Xiaomi-MIUI-Fastboot-Screen-Mi-Bunny-Mitu.jpg Fastboot Screen Mi Bunny %}
+
+Flash arrowos recovery (boot.img and vendor_boot.img):
 ```
-fastboot flash boot_ab boot_alioth.img
-fastboot flash vendor_boot_ab vendor_boot_alioth.img
+fastboot flash boot_ab boot.img
+fastboot flash vendor_boot_ab vendor_boot.img
 ```
 
 Reboot in ArrowOS Recovery:
-
 ```
 fastboot reboot recovery
 ```
 
-Make format data (Factory reset -> Format data).
+Make format data:
+Factory reset -> Format data
 
-Flash ROM (Apply update -> Apply from ADB):
-
+Flash ROM:
+Apply update -> Apply from ADB
 ```
-adb sideload name.zip
+adb sideload Arrow-alioth.zip
 ```
 
-Follow what show on device, should be ... Step 1/2 -> 2/2, then flashing ended, can reboot device in system. (In cmdline: If the process succeeds the output will stop at 47% and report `adb: failed to read command: Success`. In some cases it will report `adb: failed to read command: No error` which is also fine!")
+Follow what show on device, should be ... Step 1/2 -> 2/2, then flashing ended, can reboot device in system.
+In cmdline:
+If the process succeeds the output will stop at 47% and report `adb: failed to read command: Success`.
+In some cases it will report `adb: failed to read command: No error` which is also fine!
 
-If you want install separate gapps on vanilla buildtype, after flash ROM:
-
+If you want to install separate GApps on vanilla buildtype, after flash ROM:
 Advanced -> Reboot to recovery
-
-Flash gapps (Apply update -> Apply from ADB):
-
+Flash gapps:
+Apply update -> Apply from ADB
 ```
-adb sideload name.zip
+adb sideload GApps.zip
 ```
-__________________________________________________
 
 ## Install Update (dirty flash):
 
@@ -66,7 +80,6 @@ Go in Settings -> System -> Updater
 Download new build -> Install
 
 Device will automatically download, reboot into recovery and install a new build.
-
 
 
 > Reference
