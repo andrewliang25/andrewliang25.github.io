@@ -1,13 +1,15 @@
 ---
-title: Install Arrow OS on Redmi K40
+title: Install-Arrow-OS-on-Redmi-K40
+date: 2021-12-19 20:34:27
 tags:
 ---
+
 
 This tutorial is mainly for Xiaomi Poco F3 / Xiaomi Mi 11X / Redmi K40.
 If your phone is not the model above, you will need the ROM that fit the device.
 But main steps still remain same.
 
-**This may wipe out all personal data in the device, so backup!**
+**⚠ This may wipe out all personal data in the device, so backup! ⚠**
 
 <!-- more -->
 
@@ -28,16 +30,16 @@ https://github.com/libxzr/FastbootEnhance/releases
 
 ## First installation (Clean flash):
 
-Make sure you have unlocked the phone, or may brick it.
+**⚠ Make sure you have unlocked the phone, or may brick it. ⚠**
 
 Download ArrowOS ROM zip for Xiaomi Poco F3 / Xiaomi Mi 11X / Redmi K40:
 https://arrowos.net/download/alioth
-Vanilla Build present the cleanest OS and GApps Build pre-install Google apps and services.
+Vanilla Build presents the cleanest OS and GApps Build pre-installed Google apps and services.
 
 Extract image `boot` and `vendor_boot` from ROM zip with Payload Dumper.
 {% asset_img partitionsUnderPayloadDumper.png Partitions under Payload Dumper %}
 
-Reboot in fastboot (press and hold volumn down and power button at same time when phone is power off).
+Reboot in fastboot (press and hold volumn down and power button at same time when power off).
 {% asset_img Xiaomi-MIUI-Fastboot-Screen-Mi-Bunny-Mitu.jpg Fastboot Screen Mi Bunny %}
 
 Flash arrowos recovery (boot.img and vendor_boot.img):
