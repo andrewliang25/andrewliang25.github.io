@@ -33,9 +33,7 @@ tags:
 code block
 ```
 
-```
-{% asset_img image-file-name.png Annotation text %}
-```
+`{% asset_img image-file-name.png Annotation text %}`
 
 > Blockquotes
 > reference
