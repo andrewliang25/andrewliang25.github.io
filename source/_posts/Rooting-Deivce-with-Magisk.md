@@ -1,7 +1,9 @@
 ---
-title: Rooting Device by Magisk
+title: Rooting Deivce with Magisk
+date: 2021-12-20 22:55:41
 tags:
 ---
+
 
 {% asset_img Magisk_Logo.png Magisk %}
 
@@ -32,7 +34,7 @@ In Magisk App, press the `Install` button and choose method `Select and Patch a 
 
 ## Flash Patched Boot Image
 
-Magisk App will patched the image to `{Internal Storage}/Download/magisk_patched_{random_strings}.img`, copy it to your PC.
+Magisk App will patched the image to `Download` file in your device, the path shall be `{Internal Storage}/Download/magisk_patched_{random_strings}.img`. Copy it to your PC.
 
 Flash the patched boot image to your device:
 ```
@@ -57,7 +59,8 @@ Open App and check if Magisk in installed properly:
 If you stuck at booting logo screen, you may have patched wrong boot image.
 Download exact same version of ROM of your device current system. Re-patch `boot.img` and re-flash the new patched boot image to device shall fix it.
 
-> Reference
-> https://magiskmanager.com/
+# Reference
+
 > https://topjohnwu.github.io/Magisk/install.html
+> https://magiskmanager.com/
 > https://www.xda-developers.com/how-to-install-magisk/
