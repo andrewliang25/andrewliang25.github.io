@@ -39,5 +39,6 @@ Set the value `enable` to `true`, add the obtained Disqus shortname (`my-custom-
 Then you have comment box on your post like me below!
 
 
-> Reference
+# Reference
+
 > https://theme-next.js.org/docs/third-party-services/comments

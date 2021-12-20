@@ -44,6 +44,7 @@ Enter `edge://net-internals/#hsts` instead. Everything else is the same.
 Delete history and all be fine.
 
 
-> Reference
+# Reference
+
 > https://hsiangfeng.github.io/other/20200723/3866554212/
 > https://stackoverflow.com/questions/60558382/err-ssl-protocol-error-for-localhost-from-visual-studio-debug

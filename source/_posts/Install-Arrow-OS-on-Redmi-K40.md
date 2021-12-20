@@ -84,6 +84,7 @@ Download new build -> Install
 Device will automatically download, reboot into recovery and install a new build.
 
 
-> Reference
+# Reference
+
 > https://forum.xda-developers.com/t/rom-11-0-0-alioth-aliothin-arrowos-11-0-official-monthly.4279481/#post-85045261
 > https://blog.jhangy.us/post/unlock-and-flash-xiaomi-redmi-phones/

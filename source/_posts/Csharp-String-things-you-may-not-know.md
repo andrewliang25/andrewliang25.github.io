@@ -67,7 +67,8 @@ Console.WriteLine(string.ReferenceEquals(strA, strB)); //True
 
 
 
-> Reference
+# Reference
+
 > https://github.com/microsoft/referencesource/blob/master/mscorlib/system/string.cs
 > https://docs.microsoft.com/en-us/windows/communitytoolkit/high-performance/stringpool
 > https://wiztone.github.io/2019/02/18/string-YTYKBYD/

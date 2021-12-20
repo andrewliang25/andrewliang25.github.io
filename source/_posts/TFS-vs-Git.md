@@ -52,7 +52,8 @@ Since it is cheap to creat branches in Git. We can use branches to seperate diff
 Since Git is more popular and powerful than TFVC, I suggest new projects to use Git instead of TFVC.
 However, there is a lot of projects created before TFS supporting Git. Should they move from TFVC to Git? It depends on needs to the benefits of Git, otherwise it will just increase learning cost and pain for the team, and even worse, mess up the workflow and confuse team members.
 
-> Reference
+# Reference
+
 > https://docs.microsoft.com/en-us/azure/devops/repos/tfvc/comparison-git-tfvc?view=azure-devops
 > https://simpleprogrammer.com/git-vs-tfvc/
 > https://blog.darkthread.net/blog/tfvc-vs-git/

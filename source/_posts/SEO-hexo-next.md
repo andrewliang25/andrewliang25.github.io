@@ -65,7 +65,8 @@ google_analytics:
 
 See if Google Analytics get any dataflow.
 
-> Reference
+# Reference
+
 > https://support.google.com/webmasters/answer/9429907
 > https://github.com/hexojs/hexo-generator-sitemap
 > https://support.google.com/analytics/answer/1008015?hl=en

@@ -55,7 +55,8 @@ hexo deploy         //Deploy your website
 Now enter `https://<username>.github.io/` in browser to see how your blog looks like!
 
 
-> Reference
+# Reference
+
 > https://hexo.io/docs/index.html
 > https://hexo.io/docs/commands.html
 > https://hexo.io/docs/one-command-deployment.html

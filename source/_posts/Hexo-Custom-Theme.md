@@ -65,7 +65,8 @@ Commit it and wait for CI done its job.
 npm update
 ```
 
-> Reference
+# Reference
+
 > https://help.github.com/en/github/getting-started-with-github/fork-a-repo
 > https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/syncing-a-fork
 > https://git-scm.com/book/en/v2/Git-Tools-Submodules

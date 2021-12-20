@@ -123,7 +123,8 @@ Deploy branch should be "master".
 * Using node.js version above 12.0
 {% asset_img usingNodeVersionAbove12.png Check if node-version later than 12.0 %}
 
-> Reference
+# Reference
+
 > https://help.github.com/en/actions
 > https://confluence.atlassian.com/bitbucketserver/creating-ssh-keys-776639788.html
 > https://op30132.github.io/2020/02/05/github-action/
