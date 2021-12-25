@@ -1,7 +1,9 @@
 ---
 title: Share New Blog Article on LinkedIn via Zapier
+date: 2021-12-25 21:01:30
 tags:
 ---
+
 
 ## Add RSS in your site
 
@@ -48,20 +50,21 @@ If it looks all right, continue.
 {% asset_img Test-trigger Test Trigger %}
 
 Select `Create Share Update` and connect to your LinkedIn account.
-{% asset_img %}
-
-Test if it connects successfully.
-{% asset_img %}
+{% asset_img Create-Share-Update-in-LinkedIn.png Create Share Update in LinkedIn %}
+{% asset_img Grant-Access-to-Zapier.png Grant Access to Zapier %}
+{% asset_img LinkedIn-Account-Connected.png LinkedIn Account Connected %}
 
 Configure post format.
-{% asset_img %}
+{% asset_img Set-up-Actions.png Set up Actions %}
 
-Check test post on your LinkedIn.
-{% asset_img %}
+Test the Zap and check it on your LinkedIn.
+{% asset_img Send-Test-Post-via-Zap.png Send Test Post via Zap %}
+{% asset_img Test-Post-on-LinkedIn.png Test Post on LinkedIn %}
 
 Rename the Zap and turn it on.
-{% asset_img %}
+{% asset_img Turn-on-Zap.png Turn on Zap %}
 
+From now on, Zapier will share every new article from your blog automatically.
 
 # Reference
 
