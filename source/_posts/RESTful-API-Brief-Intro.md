@@ -1,7 +1,9 @@
 ---
 title: RESTful API Brief Introduction
+date: 2022-09-01 10:51:37
 tags:
 ---
+
 
 Representational State Transfer (REST) architectural style has been first presented in 2000 in dissertation *Architectural Styles and the Design of Network-based Software Architectures* by Roy Fielding.\
 Which introduced and elaborated the REST architectural style for distributed hypermedia systems.
