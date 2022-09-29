@@ -1,7 +1,9 @@
 ---
 title: Binary-Tree-Traversal
+date: 2022-09-29 16:12:29
 tags:
 ---
+
 
 {% asset_img binary-tree-example.png Binary Tree Example %}
 
@@ -156,8 +158,7 @@ func main() {
 }
 ```
 
-And let us see the result with example graph:
-{% asset_img binary-tree-example.png Binary Tree Example %}
+And let us see the result:
 ```
 Level Order
 0 1 2 3 4 5 6 7 8 
