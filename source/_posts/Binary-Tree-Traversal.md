@@ -1,5 +1,5 @@
 ---
-title: Binary-Tree-Traversal
+title: Binary Tree Traversal
 date: 2022-09-29 16:12:29
 tags:
 ---
