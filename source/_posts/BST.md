@@ -6,8 +6,9 @@ tags:
 
 ## Bianry Tree
 Binary tree is a tree data structure. Each node has at most two children, the left child and the right child.
-```
-Definition for a binary tree node. (JavaScript)
+```js
+// JavaScript
+// Definition for a binary tree node
 function TreeNode(key, left, right) {
     this.key = (key===undefined ? 0 : key)
     this.left = (left===undefined ? null : left)

@@ -13,7 +13,7 @@ But have you ever think about that is `string` maybe not value type?
 ## Value Type or Reference Type?
 
 Let us see an example:
-```
+```cs
 int intA = 1;
 int intB = intA;
 Console.WriteLine(int.ReferenceEquals(intA, intA)); // False
@@ -23,7 +23,7 @@ Console.WriteLine(int.ReferenceEquals(intA, intB)); // False
 Each integer is boxed inside an object instance.
 Thus, this is actually comparing references between two boxed values, which clearly aren't equal.
 And how about `string`?
-```
+```cs
 string strA = "aa";
 string strB = strA;
 Console.WriteLine(string.ReferenceEquals(strA, strA)); // True
@@ -37,7 +37,7 @@ But in reality, modifying `strA` does not affect `strB`, right?
 ## Mutable or Immutable?
 
 Lets see another example:
-```
+```cs
 string strA = "AA";
 string strB = strA;
 Console.WriteLine(strA); // AA
@@ -58,7 +58,7 @@ So what `strA += "BB"` actually does is creating a new string object `"AABB"` re
 
 `string` is very commonly used in C# programming, there is a mechanism called string pool.
 Which collects new created string instances for reusing to minimize memory allocations.
-```
+```cs
 string strA = "AA";
 string strB = "AA";
 Console.WriteLine(string.ReferenceEquals(strA, strB)); //True

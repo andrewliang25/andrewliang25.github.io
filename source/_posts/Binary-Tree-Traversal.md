@@ -31,7 +31,7 @@ Let us see code examples below:
 ## Binary Tree Data Structure
 First, we need to define a tree node object.
 A `TreeNode` contains a `int` value and two pointers reference to its two children.
-```
+```go
 // Go
 type TreeNode struct {
 	Val   int
@@ -42,7 +42,7 @@ type TreeNode struct {
 
 ## Level Order Traversal
 Use queue to store nodes in same level.
-```
+```go
 // Go
 // Iterative
 func printTreeNodeLevelOrder(Root *TreeNode) {
@@ -70,7 +70,7 @@ func printTreeNodeLevelOrder(Root *TreeNode) {
 
 ## Preorder Traversal
 
-```
+```go
 // Go
 // Recursive
 func printTreeNodePreorder(Node *TreeNode) {
@@ -84,7 +84,7 @@ func printTreeNodePreorder(Node *TreeNode) {
 ```
 
 ## Inorder Traversal
-```
+```go
 // Go
 // Recursive
 func printTreeNodeInorder(Node *TreeNode) {
@@ -98,7 +98,7 @@ func printTreeNodeInorder(Node *TreeNode) {
 ```
 
 ## Postorder Traversal
-```
+```go
 // Go
 // Recursive
 func printTreeNodePostorder(Node *TreeNode) {
@@ -113,7 +113,7 @@ func printTreeNodePostorder(Node *TreeNode) {
 
 ## Result
 Create a tree instance as example graph and call functions we have just implemented above.
-```
+```go
 // Go
 func main() {
 	var Root *TreeNode = &TreeNode{

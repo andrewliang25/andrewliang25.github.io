@@ -13,7 +13,7 @@ npm install hexo-generator-feed --save
 ```
 
 Put the plugin in `_config.yml`:
-```
+```yaml
 feed:
   enable: true
   type: atom
