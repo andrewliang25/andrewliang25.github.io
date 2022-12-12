@@ -5,13 +5,13 @@ tags:
 ---
 
 
-{% asset_img Joma-Tech-Hashmap.jpg Joma Tech %}
+{% asset_img Reverse-Polish-Notation.jpg Reverse Polish Notation %}
 
 ## Reverse Polish Notation
 
 Reverse Polish Notation (RPN) also called postfix notation.\
 Which which operators follow their operands and does not need any parentheses.\
-For example, `1 + 2` in RPN is `1 2 +`.
+For example, `3 * (10 + 5)` in RPN is `3 10 5 + *` as above.
 
 How do we write an evaluate function?
 
@@ -93,12 +93,22 @@ It seems more ordered than before, right?
 
 Replacing switch statement with hashmap increase tidiness and readability of code.
 
-*But it decreases readibility for some unskilled programmer. They can only understand fully flattened code with single-dimension.*
+Note: I have never mentioned there is any performance improvement.
 
-If there are all professional programmer in your team, try it. **Performance? Hashmap!!!**
+Actually in most cases, replacing `switch` with hashmap does not increase performance, maybe even a little bit worse.
+
+Since compilers and interpreters are fully optimized for `switch`. `switch` will be turned into mapping table, same as hashmap. Sometimes `if else` if too many cases.
+
+In this particular situation, hashmap may have better performance while consuming more memory.
+But it is more about readibility.
+
+*It may decrease readibility for some unskilled programmers. They can only understand fully flattened code with single-dimension.*
+
+If there are all professional programmer in your team, try it.
 
 {% asset_img Joma-Tech-Hashmap.jpg Joma Tech %}
 
 > Reference
 > https://leetcode.com/problems/evaluate-reverse-polish-notation/
+> https://commons.wikimedia.org/wiki/File:Reverse_Polish_Notation_Stack_Example.jpg
 > https://youtu.be/5bId3N7QZec
