@@ -3,6 +3,8 @@ title: post title
 tags:
 ---
 
+<!-- more -->
+
 # Heading level 1
 
 ## Heading level 2
