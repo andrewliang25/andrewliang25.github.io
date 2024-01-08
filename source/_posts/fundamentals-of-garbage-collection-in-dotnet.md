@@ -64,11 +64,11 @@ After the CLR initializes the garbage collector, it allocates a segment of memor
 
 The fewer objects allocated on the heap, the less work the garbage collector has to do.
 
-When a garbage collection is triggered, the garbage collector reclaims the memory that's occupied by dead objects. The reclaiming process compacts live objects so that they're moved together, and the dead space is removed, thereby making the heap smaller.
+When a garbage collection is triggered, the garbage collector reclaims the memory that is occupied by dead objects. The reclaiming process compacts live objects so that they are moved together, and the dead space is removed, thereby making the heap smaller.
 
 The heap can be considered as the accumulation of two heaps:
 + Small object heap
-+ Large object heap (LOH): Contains objects that are 85,000 bytes and larger, which are usually arrays. It's rare for an instance object to be extra large.
++ Large object heap (LOH): Contains objects that are 85,000 bytes and larger, which are usually arrays. It is rare for an instance object to be extra large.
 
 
 ## Object Generations
@@ -89,16 +89,26 @@ Newly allocated objects form implicitly Generation 0 collections. However, large
 
 Objects that are not reclaimed in a garbage collection (a.k.a. survivors) and are promoted to the next Generation.
 
-When the garbage collector detects that the survival rate is high in a generation, it increases the threshold of allocations for that generation. The next collection gets a substantial size of reclaimed memory. The CLR continually balances two priorities: not letting an application's working set get too large by delaying garbage collection and not letting the garbage collection run too frequently.
+When the garbage collector detects that the survival rate is high in a generation, it increases the threshold of allocations for that generation. The next collection gets a substantial size of reclaimed memory.
+
+The CLR continually balances two priorities:
+1. Not letting a working set get too large by delaying garbage collection.
+2. Not letting the garbage collection run too frequently.
 
 
 ## What happens during a garbage collection
 
 1. Marking phase: Finds and creates a list of all live objects.
 
+{% asset_img marking.png Marking %}
+
 2. Relocating phase: Updates the references to the objects that will be compacted.
 
 3. Compacting phase: Reclaims the space occupied by the dead objects and compacts the surviving objects by moving objects towards the older end of the segment.
+
+{% asset_img normal-deletion.png Deletion without compacting %}
+
+{% asset_img deletion-with-compacting.png After compacting %}
 
 The large object heap (LOH) is not compacted because copying large objects imposes a performance penalty. LOH is automatically compacted when a memory limit on a container or other runtime configuration options is reached.
 
@@ -110,7 +120,7 @@ Before a garbage collection starts, all managed threads are suspended except for
 
 For most of the objects, garbage collection can perform the necessary memory management tasks automatically. However, unmanaged resources require explicit cleanup.
 The most common type of unmanaged resource is an object that wraps an operating system resource, such as a file handle, window handle, network connection, or database connection.
-Although the garbage collector can track the lifetime of a managed object that encapsulates an unmanaged resource, it doesn't have specific knowledge about how to clean up the resource and how badly it hurts the performance.
+Although the garbage collector can track the lifetime of a managed object that encapsulates an unmanaged resource, it does not have specific knowledge about how to clean up the resource and how badly it hurts the performance.
 
 ## Conclusion
 
@@ -121,3 +131,4 @@ To prevent potential performance issues related to memory management, such as me
 # Reference
 > https://learn.microsoft.com/en-us/dotnet/standard/garbage-collection/fundamentals
 > https://www.site24x7.com/learn/garbage-collection-in-net-framework.html
+> https://www.oracle.com/webfolder/technetwork/tutorials/obe/java/gc01/index.html
