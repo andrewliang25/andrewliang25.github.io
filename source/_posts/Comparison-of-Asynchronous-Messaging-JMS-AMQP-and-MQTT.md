@@ -30,7 +30,7 @@ JMS has been one of most successful asynchronous messaging technology available.
 
 + A standard messaging API for Java platform.
 + Supports two messaging models: `queue` and `topic`.
-+ Supports transactions, message format, and long-lived store.
++ Supports transactions, message format, and long-lived store and forward.
 + Not interoperable with other platforms or languages, and does not define a wire level protocol.
 
 
@@ -52,7 +52,7 @@ This was the fundamental requirement for MQTT.
 + A stream-oriented, low memory consumption messaging protocol.
 + Supports publish-subscribe for topics, ephemeral messaging, and last value queue.
 + Simple security and global namespace.
-+ Not support transactions, long-lived store, fragmented messages, or connection security.
++ Not support transactions, long-lived store and forward, fragmented messages, or connection security.
 
 
 # Reference
