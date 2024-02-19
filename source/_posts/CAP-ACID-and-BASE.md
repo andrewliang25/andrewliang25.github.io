@@ -29,7 +29,7 @@ There are two kinds of structures in distributed transactions:
 CAP theorem states that any distributed data store can provide only two of the above three guarantees.
 
 Therefore, there are 3 options for building a system:
-1. CA: Monolithic system. Most centralized RDBMS have these .
+1. CA: Monolithic system. Most centralized RDBMS have these properties.
 2. CP: System returns error before all nodes have synchronized to latest update. Some distributed RDBMS(clustering) use this practice.
 3. AP: DNS and some NoSQL database implement this practice. These systems have high availability but may not return the latest data.
 
