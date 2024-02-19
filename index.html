@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="en,zh-TW,default">
+<head>
+  <meta name="google-site-verification" content="BxTLoIyAokZCIfr916vVue46xBMa_VgoAmfqQYHRC94" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"andrewliang25.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Null Playground">
+<meta property="og:url" content="http://andrewliang25.github.io/index.html">
+<meta property="og:site_name" content="Null Playground">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="Andrew Liang">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://andrewliang25.github.io/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'en'
+  };
+</script>
+
+  <title>Null Playground</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171656166-1"></script>
+    <script>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-171656166-1');
+      }
+    </script>
+
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4840065274538124"
+     crossorigin="anonymous"></script>
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Null Playground" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Null Playground</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Andrew's Blog</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">24</span></a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en,zh-TW,default">
+    <link itemprop="mainEntityOfPage" href="http://andrewliang25.github.io/2024/02/19/CAP-ACID-and-BASE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/andrew-profile-pic.jpg">
+      <meta itemprop="name" content="Andrew Liang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Null Playground">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/02/19/CAP-ACID-and-BASE/" class="post-title-link" itemprop="url">Distributed Transactions, CAP Theorem, ACID, and BASE</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2024-02-19 17:41:29" itemprop="dateCreated datePublished" datetime="2024-02-19T17:41:29+00:00">2024-02-19</time>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2024/02/19/CAP-ACID-and-BASE/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2024/02/19/CAP-ACID-and-BASE/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="What-is-a-transaction-and-why-distributed"><a href="#What-is-a-transaction-and-why-distributed" class="headerlink" title="What is a transaction and why distributed?"></a>What is a transaction and why distributed?</h2><p>A transaction is a sequence of operations that are performed as a single unit of work. The main goal of a transaction is to ensure that the data remains consistent and reliable, even in the face of failures or errors.</p>
+<p>Achieving scalability and availability requires distributed systems. Also, to guarantee atomicity in global transactions across components.</p>
+<p>There are two kinds of structures in distributed transactions:</p>
+<img src="/2024/02/19/CAP-ACID-and-BASE/Flat-Nested-TX.png" class="" title="Flat and Nested Transactions">
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/02/19/CAP-ACID-and-BASE/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en,zh-TW,default">
+    <link itemprop="mainEntityOfPage" href="http://andrewliang25.github.io/2024/02/05/Comparison-of-Asynchronous-Messaging-JMS-AMQP-and-MQTT/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/andrew-profile-pic.jpg">
+      <meta itemprop="name" content="Andrew Liang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Null Playground">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/02/05/Comparison-of-Asynchronous-Messaging-JMS-AMQP-and-MQTT/" class="post-title-link" itemprop="url">Comparison of Asynchronous Messaging: JMS, AMQP and MQTT</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2024-02-05 16:18:54" itemprop="dateCreated datePublished" datetime="2024-02-05T16:18:54+00:00">2024-02-05</time>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2024/02/05/Comparison-of-Asynchronous-Messaging-JMS-AMQP-and-MQTT/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2024/02/05/Comparison-of-Asynchronous-Messaging-JMS-AMQP-and-MQTT/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Asynchronous messaging is that sender does not expect an immediate response and does not “blocks” waiting for the response. He will carry out his remaining tasks.</p>
+<p>This article will introduce common patterns and compare 3 popular technologies for asynchronous messaging.</p>
+<h2 id="Asynchronous-messaging-patterns"><a href="#Asynchronous-messaging-patterns" class="headerlink" title="Asynchronous messaging patterns"></a>Asynchronous messaging patterns</h2><p>There are two basic patterns in asynchronous messaging (and more variants):</p>
+<ol>
+<li>Message queue<img src="/2024/02/05/Comparison-of-Asynchronous-Messaging-JMS-AMQP-and-MQTT/message-queue-pattern.jpg" class="" title="Message queue">
+Using <code>queue</code> as a message broker. One message can only be consume by a consumer. Unconsumed messages will be stored in queue until timeout.</li>
+</ol>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/02/05/Comparison-of-Asynchronous-Messaging-JMS-AMQP-and-MQTT/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en,zh-TW,default">
+    <link itemprop="mainEntityOfPage" href="http://andrewliang25.github.io/2024/01/08/fundamentals-of-garbage-collection-in-dotnet/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/andrew-profile-pic.jpg">
+      <meta itemprop="name" content="Andrew Liang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Null Playground">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/01/08/fundamentals-of-garbage-collection-in-dotnet/" class="post-title-link" itemprop="url">Fundamentals of Garbage Collection in .NET</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2024-01-08 15:01:08" itemprop="dateCreated datePublished" datetime="2024-01-08T15:01:08+00:00">2024-01-08</time>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2024/01/08/fundamentals-of-garbage-collection-in-dotnet/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2024/01/08/fundamentals-of-garbage-collection-in-dotnet/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>The common language runtime (CLR) provides an automatic memory manager, which is the garbage collector (GC).<br>Unlike languages like C and C++, developers need to manually handle memory allocation, the GC manages the allocation and deallocation of memory for objects in a .NET application to simplify development, reduce memory leaks, and improve overall code safety.</p>
+<img src="/2024/01/08/fundamentals-of-garbage-collection-in-dotnet/dotnet_logo.png" class="" title=".NET logo">
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/01/08/fundamentals-of-garbage-collection-in-dotnet/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en,zh-TW,default">
+    <link itemprop="mainEntityOfPage" href="http://andrewliang25.github.io/2023/12/26/Redis-Memory-Management/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/andrew-profile-pic.jpg">
+      <meta itemprop="name" content="Andrew Liang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Null Playground">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/12/26/Redis-Memory-Management/" class="post-title-link" itemprop="url">Redis Memory Management</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2023-12-26 16:31:03" itemprop="dateCreated datePublished" datetime="2023-12-26T16:31:03+00:00">2023-12-26</time>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2023/12/26/Redis-Memory-Management/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2023/12/26/Redis-Memory-Management/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="Key-Expiration"><a href="#Key-Expiration" class="headerlink" title="Key Expiration"></a>Key Expiration</h2><p>Redis allows to set an expiration time for keys using the <code>EXPIRE</code> command or by providing a TTL (Time-to-Live) value when setting the key.<br>This feature is beneficial for managing data expiration and automatic cleanup, saving storage space, and improving performance.<br>Also, there is some data only valid for a period of time, i.e. verify code, login token, etc.</p>
+<p>Redis has another dictionary(hashtable) for saving expiration time of keys, which stores unix timestamps in milliseconds (<code>long long</code> data type).</p>
+<img src="/2023/12/26/Redis-Memory-Management/redis-expired-dictionary.png" class="" title="Redis Expires Dictionary">
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/12/26/Redis-Memory-Management/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en,zh-TW,default">
+    <link itemprop="mainEntityOfPage" href="http://andrewliang25.github.io/2023/04/18/AutoGPT-First-Try-and-Tutorial/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/andrew-profile-pic.jpg">
+      <meta itemprop="name" content="Andrew Liang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Null Playground">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/04/18/AutoGPT-First-Try-and-Tutorial/" class="post-title-link" itemprop="url">AutoGPT First Try and Tutorial</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2023-04-18 17:27:45" itemprop="dateCreated datePublished" datetime="2023-04-18T17:27:45+00:00">2023-04-18</time>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2023/04/18/AutoGPT-First-Try-and-Tutorial/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2023/04/18/AutoGPT-First-Try-and-Tutorial/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <img src="/2023/04/18/AutoGPT-First-Try-and-Tutorial/msedge_vcjUhxbCOM.png" class="" title="Auto-GPT v0.2.1">
+
+<h2 id="What-is-Auto-GPT"><a href="#What-is-Auto-GPT" class="headerlink" title="What is Auto-GPT?"></a>What is Auto-GPT?</h2><p>Let Auto-GPT introduce himself!</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/04/18/AutoGPT-First-Try-and-Tutorial/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en,zh-TW,default">
+    <link itemprop="mainEntityOfPage" href="http://andrewliang25.github.io/2023/02/16/Safety-and-Idempotence-in-API-Design/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/andrew-profile-pic.jpg">
+      <meta itemprop="name" content="Andrew Liang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Null Playground">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/02/16/Safety-and-Idempotence-in-API-Design/" class="post-title-link" itemprop="url">Safety and Idempotence in API Design</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2023-02-16 15:43:53" itemprop="dateCreated datePublished" datetime="2023-02-16T15:43:53+00:00">2023-02-16</time>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2023/02/16/Safety-and-Idempotence-in-API-Design/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2023/02/16/Safety-and-Idempotence-in-API-Design/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <img src="/2023/02/16/Safety-and-Idempotence-in-API-Design/http-methods.jpg" class="" title="HTTP methods">
+
+<p>There are various HTTP methods. Every of them has its own semantics.<br>Which means each method has been defined what it should do.</p>
+<p>Designing APIs that following semantics is important since semantics of methods has been defined in HTTP/1.1 specification.<br>Almost all browsers, APIs, apps, tools, and other developments are based on this consensus.<br>So not following it may cause issues in most scenarios.</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/02/16/Safety-and-Idempotence-in-API-Design/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en,zh-TW,default">
+    <link itemprop="mainEntityOfPage" href="http://andrewliang25.github.io/2022/11/25/Replacing-Swtich-Statement-with-Hashmap/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/andrew-profile-pic.jpg">
+      <meta itemprop="name" content="Andrew Liang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Null Playground">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/11/25/Replacing-Swtich-Statement-with-Hashmap/" class="post-title-link" itemprop="url">Replacing Swtich Statement with Hashmap</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-11-25 16:54:05" itemprop="dateCreated datePublished" datetime="2022-11-25T16:54:05+00:00">2022-11-25</time>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2022/11/25/Replacing-Swtich-Statement-with-Hashmap/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2022/11/25/Replacing-Swtich-Statement-with-Hashmap/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <img src="/2022/11/25/Replacing-Swtich-Statement-with-Hashmap/Reverse-Polish-Notation.jpg" class="" title="Reverse Polish Notation">
+
+<h2 id="Reverse-Polish-Notation"><a href="#Reverse-Polish-Notation" class="headerlink" title="Reverse Polish Notation"></a>Reverse Polish Notation</h2><p>Reverse Polish Notation (RPN) also called postfix notation.<br>Which which operators follow their operands and does not need any parentheses.<br>For example, <code>3 * (10 + 5)</code> in RPN is <code>3 10 5 + *</code> as above.</p>
+<p>How do we write an evaluate function?</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/11/25/Replacing-Swtich-Statement-with-Hashmap/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en,zh-TW,default">
+    <link itemprop="mainEntityOfPage" href="http://andrewliang25.github.io/2022/09/29/Binary-Tree-Traversal/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/andrew-profile-pic.jpg">
+      <meta itemprop="name" content="Andrew Liang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Null Playground">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/09/29/Binary-Tree-Traversal/" class="post-title-link" itemprop="url">Binary Tree Traversal</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-09-29 16:12:29" itemprop="dateCreated datePublished" datetime="2022-09-29T16:12:29+00:00">2022-09-29</time>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2022/09/29/Binary-Tree-Traversal/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2022/09/29/Binary-Tree-Traversal/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <img src="/2022/09/29/Binary-Tree-Traversal/binary-tree-example.png" class="" title="Binary Tree Example">
+
+<p>Traversal means to go through all node on tree.</p>
+<p>The most intuitive way in my mind is level-order way:<br>Print all node on root level from left to right, and then its child level, and so on.<br>Level order of example graph is <code>0 1 2 3 4 5 6 7 8</code>.</p>
+<p>But how about depth-first way?<br>There are 3 actions when we move on a tree node:</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/09/29/Binary-Tree-Traversal/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en,zh-TW,default">
+    <link itemprop="mainEntityOfPage" href="http://andrewliang25.github.io/2022/09/01/RESTful-API-Brief-Intro/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/andrew-profile-pic.jpg">
+      <meta itemprop="name" content="Andrew Liang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Null Playground">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/09/01/RESTful-API-Brief-Intro/" class="post-title-link" itemprop="url">RESTful API Brief Introduction</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-09-01 10:51:37" itemprop="dateCreated datePublished" datetime="2022-09-01T10:51:37+00:00">2022-09-01</time>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2022/09/01/RESTful-API-Brief-Intro/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2022/09/01/RESTful-API-Brief-Intro/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Representational State Transfer (REST) architectural style has been first presented in 2000 in dissertation <em>Architectural Styles and the Design of Network-based Software Architectures</em> by Roy Fielding.<br>Which introduced and elaborated the REST architectural style for distributed hypermedia systems.<br>He is also one of the principal authors of HTTP/1.1 specification.</p>
+<img src="/2022/09/01/RESTful-API-Brief-Intro/Roy-Fielding.jpg" class="" title="Roy Fielding">
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/09/01/RESTful-API-Brief-Intro/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en,zh-TW,default">
+    <link itemprop="mainEntityOfPage" href="http://andrewliang25.github.io/2022/06/29/Csharp-Exception-Behavior/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/andrew-profile-pic.jpg">
+      <meta itemprop="name" content="Andrew Liang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Null Playground">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/06/29/Csharp-Exception-Behavior/" class="post-title-link" itemprop="url">C# Exception Behavior</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-06-29 15:04:02" itemprop="dateCreated datePublished" datetime="2022-06-29T15:04:02+00:00">2022-06-29</time>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2022/06/29/Csharp-Exception-Behavior/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2022/06/29/Csharp-Exception-Behavior/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>As a programmer, we can see <strong><em>a lot of</em></strong> <em>try-catch patterns</em> in the legacy code.</p>
+<p>But sometimes exception messages cannot precisely point out where the error occured.</p>
+<p>And this is how C# Exception behaves.</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/06/29/Csharp-Exception-Behavior/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Andrew Liang"
+      src="/images/andrew-profile-pic.jpg">
+  <p class="site-author-name" itemprop="name">Andrew Liang</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">24</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://linktr.ee/andrewliang25" title="LinkTree → https:&#x2F;&#x2F;linktr.ee&#x2F;andrewliang25" rel="noopener" target="_blank"><i class="fas fa-tree fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.linkedin.com/in/andrew-liang-615b551b0" title="LinkedIn → https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;andrew-liang-615b551b0" rel="noopener" target="_blank"><i class="fab fa-linkedin-in fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://github.com/andrewliang25" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;andrewliang25" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.youtube.com/@andrewliang25" title="YouTube → https:&#x2F;&#x2F;www.youtube.com&#x2F;@andrewliang25" rel="noopener" target="_blank"><i class="fab fa-youtube fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:andrewliang25@gmail.com" title="Email → mailto:andrewliang25@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://t.me/andrewliang25" title="Telegram → https:&#x2F;&#x2F;t.me&#x2F;andrewliang25" rel="noopener" target="_blank"><i class="fab fa-telegram-plane fa-fw"></i></a>
+      </span>
+  </div>
+
+
+
+      </div>
+	  
+	  <!--google_adsense-->
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Andrew Liang</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://andrewliangblog.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+
+</body>
+</html>

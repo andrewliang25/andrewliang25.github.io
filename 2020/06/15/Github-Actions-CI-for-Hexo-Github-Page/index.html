@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en,zh-TW,default">
+<head>
+  <meta name="google-site-verification" content="BxTLoIyAokZCIfr916vVue46xBMa_VgoAmfqQYHRC94" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"andrewliang25.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="Note: Already Built GitHub Pages with Hexo Set up access key for repoGenerate SSH keysOpen terminal and generate SSH keys by following command. 1ssh-keygen -f github-deploy-key Skip passphrase.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Github Actions - CI for Hexo Github Page">
+<meta property="og:url" content="http://andrewliang25.github.io/2020/06/15/Github-Actions-CI-for-Hexo-Github-Page/index.html">
+<meta property="og:site_name" content="Null Playground">
+<meta property="og:description" content="Note: Already Built GitHub Pages with Hexo Set up access key for repoGenerate SSH keysOpen terminal and generate SSH keys by following command. 1ssh-keygen -f github-deploy-key Skip passphrase.">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://andrewliang25.github.io/2020/06/15/Github-Actions-CI-for-Hexo-Github-Page/sshkeygen.png">
+<meta property="og:image" content="http://andrewliang25.github.io/2020/06/15/Github-Actions-CI-for-Hexo-Github-Page/keyfile.png">
+<meta property="og:image" content="http://andrewliang25.github.io/2020/06/15/Github-Actions-CI-for-Hexo-Github-Page/newsecret.png">
+<meta property="og:image" content="http://andrewliang25.github.io/2020/06/15/Github-Actions-CI-for-Hexo-Github-Page/enterHexoDeployPri.png">
+<meta property="og:image" content="http://andrewliang25.github.io/2020/06/15/Github-Actions-CI-for-Hexo-Github-Page/addDeployKeys.png">
+<meta property="og:image" content="http://andrewliang25.github.io/2020/06/15/Github-Actions-CI-for-Hexo-Github-Page/deployKeysAddNew.png">
+<meta property="og:image" content="http://andrewliang25.github.io/2020/06/15/Github-Actions-CI-for-Hexo-Github-Page/setDefaultBranch.png">
+<meta property="og:image" content="http://andrewliang25.github.io/2020/06/15/Github-Actions-CI-for-Hexo-Github-Page/setWorkflowYourself.png">
+<meta property="og:image" content="http://andrewliang25.github.io/2020/06/15/Github-Actions-CI-for-Hexo-Github-Page/commitMainYAML.png">
+<meta property="og:image" content="http://andrewliang25.github.io/2020/06/15/Github-Actions-CI-for-Hexo-Github-Page/configDeploySSH.png">
+<meta property="og:image" content="http://andrewliang25.github.io/2020/06/15/Github-Actions-CI-for-Hexo-Github-Page/pushTriggerCheck.png">
+<meta property="og:image" content="http://andrewliang25.github.io/2020/06/15/Github-Actions-CI-for-Hexo-Github-Page/checkDeployKeyAccess.png">
+<meta property="og:image" content="http://andrewliang25.github.io/2020/06/15/Github-Actions-CI-for-Hexo-Github-Page/usingNodeVersionAbove12.png">
+<meta property="article:published_time" content="2020-06-15T18:48:36.000Z">
+<meta property="article:modified_time" content="2024-02-19T13:45:13.403Z">
+<meta property="article:author" content="Andrew Liang">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://andrewliang25.github.io/2020/06/15/Github-Actions-CI-for-Hexo-Github-Page/sshkeygen.png">
+
+<link rel="canonical" href="http://andrewliang25.github.io/2020/06/15/Github-Actions-CI-for-Hexo-Github-Page/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>Github Actions - CI for Hexo Github Page | Null Playground</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171656166-1"></script>
+    <script>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-171656166-1');
+      }
+    </script>
+
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4840065274538124"
+     crossorigin="anonymous"></script>
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Null Playground" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Null Playground</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Andrew's Blog</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">24</span></a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://andrewliang25.github.io/2020/06/15/Github-Actions-CI-for-Hexo-Github-Page/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/andrew-profile-pic.jpg">
+      <meta itemprop="name" content="Andrew Liang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Null Playground">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Github Actions - CI for Hexo Github Page
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-06-15 18:48:36" itemprop="dateCreated datePublished" datetime="2020-06-15T18:48:36+00:00">2020-06-15</time>
+            </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2020/06/15/Github-Actions-CI-for-Hexo-Github-Page/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/06/15/Github-Actions-CI-for-Hexo-Github-Page/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><strong>Note: Already Built GitHub Pages with Hexo</strong></p>
+<h2 id="Set-up-access-key-for-repo"><a href="#Set-up-access-key-for-repo" class="headerlink" title="Set up access key for repo"></a>Set up access key for repo</h2><h3 id="Generate-SSH-keys"><a href="#Generate-SSH-keys" class="headerlink" title="Generate SSH keys"></a>Generate SSH keys</h3><p>Open terminal and generate SSH keys by following command.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -f github-deploy-key</span><br></pre></td></tr></table></figure>
+<p>Skip passphrase.</p>
+<span id="more"></span>
+
+<img src="/2020/06/15/Github-Actions-CI-for-Hexo-Github-Page/sshkeygen.png" class="" title="SSH key generated on terminal">
+<p>After generating, there should be 2 files.</p>
+<img src="/2020/06/15/Github-Actions-CI-for-Hexo-Github-Page/keyfile.png" class="" title="Private Key &amp; Public Key">
+
+<h3 id="Set-up-private-key"><a href="#Set-up-private-key" class="headerlink" title="Set up private key"></a>Set up private key</h3><p>blog repo → Settings → Secrets → New secret</p>
+<img src="/2020/06/15/Github-Actions-CI-for-Hexo-Github-Page/newsecret.png" class="" title="Create new secret">
+<p>Name: HEXO_DEPLOY_PRI<br>Value: All content in github-deploy-key</p>
+<img src="/2020/06/15/Github-Actions-CI-for-Hexo-Github-Page/enterHexoDeployPri.png" class="" title="Add Private Key as secret">
+<p><strong>⚠ Never upload or tell anyone Private Key. ⚠</strong></p>
+<h3 id="Set-up-public-key"><a href="#Set-up-public-key" class="headerlink" title="Set up public key"></a>Set up public key</h3><p>blog repo → Settings → Deploy keys → add deploy key</p>
+<img src="/2020/06/15/Github-Actions-CI-for-Hexo-Github-Page/addDeployKeys.png" class="" title="New deploy key">
+<p>Name: HEXO_DEPLOY_PUB<br>Value: All content in github-deploy-key.pub<br><strong>Check “Allow write access” to enable push access</strong></p>
+<img src="/2020/06/15/Github-Actions-CI-for-Hexo-Github-Page/deployKeysAddNew.png" class="" title="Add Public Key as deploy key">
+
+<h2 id="Build-new-workflow-in-github-action"><a href="#Build-new-workflow-in-github-action" class="headerlink" title="Build new workflow in github action"></a>Build new workflow in github action</h2><h3 id="Create-a-workflow"><a href="#Create-a-workflow" class="headerlink" title="Create a workflow"></a>Create a workflow</h3><p>Fisrt, set source branch as default branch.<br>Settings -&gt; Branches -&gt; Select your source branch -&gt; Update</p>
+<img src="/2020/06/15/Github-Actions-CI-for-Hexo-Github-Page/setDefaultBranch.png" class="" title="Set Blog Source branch as default branch">
+
+<p><strong>Note: the workflow file will be created under default branch.</strong></p>
+<p>Action -&gt;  new workflow -&gt; set up a workflow yourself</p>
+<img src="/2020/06/15/Github-Actions-CI-for-Hexo-Github-Page/setWorkflowYourself.png" class="" title="Set up a workflow yourself">
+
+<h3 id="Modify-main-yml-and-commit"><a href="#Modify-main-yml-and-commit" class="headerlink" title="Modify main.yml and commit"></a>Modify main.yml and commit</h3><p>Replace “blog_source_branch”, “username”, “<a href="mailto:username@email.address">username@email.address</a>“ with your own info.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">name: HEXO CI</span><br><span class="line"></span><br><span class="line">on:</span><br><span class="line">  push:</span><br><span class="line">    branches:</span><br><span class="line">    - &lt;blog_source_branch&gt;</span><br><span class="line"></span><br><span class="line">jobs:</span><br><span class="line">  build:</span><br><span class="line">    runs-on: ubuntu-latest</span><br><span class="line">    strategy:</span><br><span class="line">      matrix:</span><br><span class="line">        node-version: [14.x]</span><br><span class="line"></span><br><span class="line">    steps:</span><br><span class="line">      - uses: actions/checkout@v1</span><br><span class="line"></span><br><span class="line">      - name: Use Node.js $&#123;&#123; matrix.node-version &#125;&#125;</span><br><span class="line">        uses: actions/setup-node@v1</span><br><span class="line">        with:</span><br><span class="line">          node-version: $&#123;&#123; matrix.node-version &#125;&#125;</span><br><span class="line"></span><br><span class="line">      - name: Configuration environment</span><br><span class="line">        env:</span><br><span class="line">          HEXO_DEPLOY_PRI: $&#123;&#123;secrets.HEXO_DEPLOY_PRI&#125;&#125;</span><br><span class="line">        run: |</span><br><span class="line">          mkdir -p ~/.ssh/</span><br><span class="line">          echo &quot;$HEXO_DEPLOY_PRI&quot; &gt; ~/.ssh/id_rsa</span><br><span class="line">          chmod 600 ~/.ssh/id_rsa</span><br><span class="line">          ssh-keyscan github.com &gt;&gt; ~/.ssh/known_hosts</span><br><span class="line">          git config --global user.name &quot;&lt;username&gt;&quot;</span><br><span class="line">          git config --global user.email &quot;&lt;username@email.address&gt;&quot;</span><br><span class="line">      - name: Install dependencies</span><br><span class="line">        run: |</span><br><span class="line">          npm i -g hexo-cli</span><br><span class="line">          npm i</span><br><span class="line">      - name: Deploy hexo</span><br><span class="line">        run: |</span><br><span class="line">          hexo clean &amp;&amp; hexo generate &amp;&amp; hexo deploy</span><br></pre></td></tr></table></figure>
+<p><strong>Note: Hexo CI creates a Virtual Machine and deploy website for you.</strong></p>
+<p>Commit main.yml into default branch.</p>
+<img src="/2020/06/15/Github-Actions-CI-for-Hexo-Github-Page/commitMainYAML.png" class="" title="Commit main.yml into default branch">
+
+<h3 id="Config-Hexo-deploy"><a href="#Config-Hexo-deploy" class="headerlink" title="Config Hexo deploy"></a>Config Hexo deploy</h3><p>Open “_config.yml” on local.<br>Change git repositary from http form to ssh form.<br>Deploy branch should be “master”.</p>
+<img src="/2020/06/15/Github-Actions-CI-for-Hexo-Github-Page/configDeploySSH.png" class="" title="Deploy config">
+
+<h1 id="Known-Issues"><a href="#Known-Issues" class="headerlink" title="Known Issues"></a>Known Issues</h1><h2 id="CI-does-not-tiggered-after-push"><a href="#CI-does-not-tiggered-after-push" class="headerlink" title="CI does not tiggered after push"></a>CI does not tiggered after push</h2><ul>
+<li>Check if source branch is set as trigger branch in main.yml</li>
+<li>Check if .github/workflows/main.yml locates under source branch<img src="/2020/06/15/Github-Actions-CI-for-Hexo-Github-Page/pushTriggerCheck.png" class="" title="Check branch">
+
+</li>
+</ul>
+<h2 id="CI-deploy-hexo-failed-with-no-access"><a href="#CI-deploy-hexo-failed-with-no-access" class="headerlink" title="CI deploy hexo failed with no access"></a>CI deploy hexo failed with no access</h2><ul>
+<li>Make sure keys are entered correctly</li>
+<li>Allow write access on Public Key<img src="/2020/06/15/Github-Actions-CI-for-Hexo-Github-Page/checkDeployKeyAccess.png" class="" title="Check deploy key access">
+
+</li>
+</ul>
+<h2 id="Deploy-hexo-failed-with-TypeError-line-matchAll-is-not-a-function"><a href="#Deploy-hexo-failed-with-TypeError-line-matchAll-is-not-a-function" class="headerlink" title="Deploy hexo failed with TypeError: line.matchAll is not a function"></a>Deploy hexo failed with TypeError: line.matchAll is not a function</h2><ul>
+<li>Using node.js version above 12.0<img src="/2020/06/15/Github-Actions-CI-for-Hexo-Github-Page/usingNodeVersionAbove12.png" class="" title="Check if node-version later than 12.0">
+
+</li>
+</ul>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><blockquote>
+<p><a target="_blank" rel="noopener" href="https://help.github.com/en/actions">https://help.github.com/en/actions</a><br><a target="_blank" rel="noopener" href="https://confluence.atlassian.com/bitbucketserver/creating-ssh-keys-776639788.html">https://confluence.atlassian.com/bitbucketserver/creating-ssh-keys-776639788.html</a><br><a target="_blank" rel="noopener" href="https://op30132.github.io/2020/02/05/github-action/">https://op30132.github.io/2020/02/05/github-action/</a></p>
+</blockquote>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/06/03/Install-Hexo/" rel="prev" title="Install Hexo and Deploy to GitHub">
+      <i class="fa fa-chevron-left"></i> Install Hexo and Deploy to GitHub
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/06/24/Hexo-Custom-Theme/" rel="next" title="Hexo - Custom Theme">
+      Hexo - Custom Theme <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Set-up-access-key-for-repo"><span class="nav-number">1.</span> <span class="nav-text">Set up access key for repo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-SSH-keys"><span class="nav-number">1.1.</span> <span class="nav-text">Generate SSH keys</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Set-up-private-key"><span class="nav-number">1.2.</span> <span class="nav-text">Set up private key</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Set-up-public-key"><span class="nav-number">1.3.</span> <span class="nav-text">Set up public key</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Build-new-workflow-in-github-action"><span class="nav-number">2.</span> <span class="nav-text">Build new workflow in github action</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-workflow"><span class="nav-number">2.1.</span> <span class="nav-text">Create a workflow</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Modify-main-yml-and-commit"><span class="nav-number">2.2.</span> <span class="nav-text">Modify main.yml and commit</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Config-Hexo-deploy"><span class="nav-number">2.3.</span> <span class="nav-text">Config Hexo deploy</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Known-Issues"><span class="nav-number"></span> <span class="nav-text">Known Issues</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#CI-does-not-tiggered-after-push"><span class="nav-number">1.</span> <span class="nav-text">CI does not tiggered after push</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CI-deploy-hexo-failed-with-no-access"><span class="nav-number">2.</span> <span class="nav-text">CI deploy hexo failed with no access</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Deploy-hexo-failed-with-TypeError-line-matchAll-is-not-a-function"><span class="nav-number">3.</span> <span class="nav-text">Deploy hexo failed with TypeError: line.matchAll is not a function</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Reference"><span class="nav-number"></span> <span class="nav-text">Reference</span></a></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Andrew Liang"
+      src="/images/andrew-profile-pic.jpg">
+  <p class="site-author-name" itemprop="name">Andrew Liang</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">24</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://linktr.ee/andrewliang25" title="LinkTree → https:&#x2F;&#x2F;linktr.ee&#x2F;andrewliang25" rel="noopener" target="_blank"><i class="fas fa-tree fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.linkedin.com/in/andrew-liang-615b551b0" title="LinkedIn → https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;andrew-liang-615b551b0" rel="noopener" target="_blank"><i class="fab fa-linkedin-in fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://github.com/andrewliang25" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;andrewliang25" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.youtube.com/@andrewliang25" title="YouTube → https:&#x2F;&#x2F;www.youtube.com&#x2F;@andrewliang25" rel="noopener" target="_blank"><i class="fab fa-youtube fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:andrewliang25@gmail.com" title="Email → mailto:andrewliang25@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://t.me/andrewliang25" title="Telegram → https:&#x2F;&#x2F;t.me&#x2F;andrewliang25" rel="noopener" target="_blank"><i class="fab fa-telegram-plane fa-fw"></i></a>
+      </span>
+  </div>
+
+
+
+      </div>
+	  
+	  <!--google_adsense-->
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Andrew Liang</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://andrewliangblog.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  var disqus_config = function() {
+    this.page.url = "http://andrewliang25.github.io/2020/06/15/Github-Actions-CI-for-Hexo-Github-Page/";
+    this.page.identifier = "2020/06/15/Github-Actions-CI-for-Hexo-Github-Page/";
+    this.page.title = "Github Actions - CI for Hexo Github Page";
+    };
+  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: disqus_config
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://andrewliangblog.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  });
+</script>
+
+</body>
+</html>

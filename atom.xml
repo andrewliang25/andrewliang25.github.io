@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Null Playground</title>
+  <icon>http://andrewliang25.github.io/icon.png</icon>
+  <subtitle>Andrew&#39;s Blog</subtitle>
+  <link href="http://andrewliang25.github.io/atom.xml" rel="self"/>
+  
+  <link href="http://andrewliang25.github.io/"/>
+  <updated>2024-02-19T13:45:13.379Z</updated>
+  <id>http://andrewliang25.github.io/</id>
+  
+  <author>
+    <name>Andrew Liang</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Distributed Transactions, CAP Theorem, ACID, and BASE</title>
+    <link href="http://andrewliang25.github.io/2024/02/19/CAP-ACID-and-BASE/"/>
+    <id>http://andrewliang25.github.io/2024/02/19/CAP-ACID-and-BASE/</id>
+    <published>2024-02-19T17:41:29.000Z</published>
+    <updated>2024-02-19T13:45:13.379Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;What-is-a-transaction-and-why-distributed&quot;&gt;&lt;a href=&quot;#What-is-a-transaction-and-why-distributed&quot; class=&quot;headerlink&quot; title=&quot;What is a transaction and why distributed?&quot;&gt;&lt;/a&gt;What is a transaction and why distributed?&lt;/h2&gt;&lt;p&gt;A transaction is a sequence of operations that are performed as a single unit of work. The main goal of a transaction is to ensure that the data remains consistent and reliable, even in the face of failures or errors.&lt;/p&gt;
+&lt;p&gt;Achieving scalability and availability requires distributed systems. Also, to guarantee atomicity in global transactions across components.&lt;/p&gt;
+&lt;p&gt;There are two kinds of structures in distributed transactions:&lt;/p&gt;
+&lt;img src=&quot;/2024/02/19/CAP-ACID-and-BASE/Flat-Nested-TX.png&quot; class=&quot;&quot; title=&quot;Flat and Nested Transactions&quot;&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Comparison of Asynchronous Messaging: JMS, AMQP and MQTT</title>
+    <link href="http://andrewliang25.github.io/2024/02/05/Comparison-of-Asynchronous-Messaging-JMS-AMQP-and-MQTT/"/>
+    <id>http://andrewliang25.github.io/2024/02/05/Comparison-of-Asynchronous-Messaging-JMS-AMQP-and-MQTT/</id>
+    <published>2024-02-05T16:18:54.000Z</published>
+    <updated>2024-02-19T13:45:13.399Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Asynchronous messaging is that sender does not expect an immediate response and does not “blocks” waiting for the response. He will carry out his remaining tasks.&lt;/p&gt;
+&lt;p&gt;This article will introduce common patterns and compare 3 popular technologies for asynchronous messaging.&lt;/p&gt;
+&lt;h2 id=&quot;Asynchronous-messaging-patterns&quot;&gt;&lt;a href=&quot;#Asynchronous-messaging-patterns&quot; class=&quot;headerlink&quot; title=&quot;Asynchronous messaging patterns&quot;&gt;&lt;/a&gt;Asynchronous messaging patterns&lt;/h2&gt;&lt;p&gt;There are two basic patterns in asynchronous messaging (and more variants):&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Message queue&lt;img src=&quot;/2024/02/05/Comparison-of-Asynchronous-Messaging-JMS-AMQP-and-MQTT/message-queue-pattern.jpg&quot; class=&quot;&quot; title=&quot;Message queue&quot;&gt;
+Using &lt;code&gt;queue&lt;/code&gt; as a message broker. One message can only be consume by a consumer. Unconsumed messages will be stored in queue until timeout.&lt;/li&gt;
+&lt;/ol&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Fundamentals of Garbage Collection in .NET</title>
+    <link href="http://andrewliang25.github.io/2024/01/08/fundamentals-of-garbage-collection-in-dotnet/"/>
+    <id>http://andrewliang25.github.io/2024/01/08/fundamentals-of-garbage-collection-in-dotnet/</id>
+    <published>2024-01-08T15:01:08.000Z</published>
+    <updated>2024-02-19T13:45:13.419Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;The common language runtime (CLR) provides an automatic memory manager, which is the garbage collector (GC).&lt;br&gt;Unlike languages like C and C++, developers need to manually handle memory allocation, the GC manages the allocation and deallocation of memory for objects in a .NET application to simplify development, reduce memory leaks, and improve overall code safety.&lt;/p&gt;
+&lt;img src=&quot;/2024/01/08/fundamentals-of-garbage-collection-in-dotnet/dotnet_logo.png&quot; class=&quot;&quot; title=&quot;.NET logo&quot;&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Redis Memory Management</title>
+    <link href="http://andrewliang25.github.io/2023/12/26/Redis-Memory-Management/"/>
+    <id>http://andrewliang25.github.io/2023/12/26/Redis-Memory-Management/</id>
+    <published>2023-12-26T16:31:03.000Z</published>
+    <updated>2024-02-19T13:45:13.407Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;Key-Expiration&quot;&gt;&lt;a href=&quot;#Key-Expiration&quot; class=&quot;headerlink&quot; title=&quot;Key Expiration&quot;&gt;&lt;/a&gt;Key Expiration&lt;/h2&gt;&lt;p&gt;Redis allows to set an expiration time for keys using the &lt;code&gt;EXPIRE&lt;/code&gt; command or by providing a TTL (Time-to-Live) value when setting the key.&lt;br&gt;This feature is beneficial for managing data expiration and automatic cleanup, saving storage space, and improving performance.&lt;br&gt;Also, there is some data only valid for a period of time, i.e. verify code, login token, etc.&lt;/p&gt;
+&lt;p&gt;Redis has another dictionary(hashtable) for saving expiration time of keys, which stores unix timestamps in milliseconds (&lt;code&gt;long long&lt;/code&gt; data type).&lt;/p&gt;
+&lt;img src=&quot;/2023/12/26/Redis-Memory-Management/redis-expired-dictionary.png&quot; class=&quot;&quot; title=&quot;Redis Expires Dictionary&quot;&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>AutoGPT First Try and Tutorial</title>
+    <link href="http://andrewliang25.github.io/2023/04/18/AutoGPT-First-Try-and-Tutorial/"/>
+    <id>http://andrewliang25.github.io/2023/04/18/AutoGPT-First-Try-and-Tutorial/</id>
+    <published>2023-04-18T17:27:45.000Z</published>
+    <updated>2024-02-19T13:45:13.375Z</updated>
+    
+    
+    <summary type="html">&lt;img src=&quot;/2023/04/18/AutoGPT-First-Try-and-Tutorial/msedge_vcjUhxbCOM.png&quot; class=&quot;&quot; title=&quot;Auto-GPT v0.2.1&quot;&gt;
+
+&lt;h2 id=&quot;What-is-Auto-GPT&quot;&gt;&lt;a href=&quot;#What-is-Auto-GPT&quot; class=&quot;headerlink&quot; title=&quot;What is Auto-GPT?&quot;&gt;&lt;/a&gt;What is Auto-GPT?&lt;/h2&gt;&lt;p&gt;Let Auto-GPT introduce himself!&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Safety and Idempotence in API Design</title>
+    <link href="http://andrewliang25.github.io/2023/02/16/Safety-and-Idempotence-in-API-Design/"/>
+    <id>http://andrewliang25.github.io/2023/02/16/Safety-and-Idempotence-in-API-Design/</id>
+    <published>2023-02-16T15:43:53.000Z</published>
+    <updated>2024-02-19T13:45:13.419Z</updated>
+    
+    
+    <summary type="html">&lt;img src=&quot;/2023/02/16/Safety-and-Idempotence-in-API-Design/http-methods.jpg&quot; class=&quot;&quot; title=&quot;HTTP methods&quot;&gt;
+
+&lt;p&gt;There are various HTTP methods. Every of them has its own semantics.&lt;br&gt;Which means each method has been defined what it should do.&lt;/p&gt;
+&lt;p&gt;Designing APIs that following semantics is important since semantics of methods has been defined in HTTP/1.1 specification.&lt;br&gt;Almost all browsers, APIs, apps, tools, and other developments are based on this consensus.&lt;br&gt;So not following it may cause issues in most scenarios.&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Replacing Swtich Statement with Hashmap</title>
+    <link href="http://andrewliang25.github.io/2022/11/25/Replacing-Swtich-Statement-with-Hashmap/"/>
+    <id>http://andrewliang25.github.io/2022/11/25/Replacing-Swtich-Statement-with-Hashmap/</id>
+    <published>2022-11-25T16:54:05.000Z</published>
+    <updated>2024-02-19T13:45:13.411Z</updated>
+    
+    
+    <summary type="html">&lt;img src=&quot;/2022/11/25/Replacing-Swtich-Statement-with-Hashmap/Reverse-Polish-Notation.jpg&quot; class=&quot;&quot; title=&quot;Reverse Polish Notation&quot;&gt;
+
+&lt;h2 id=&quot;Reverse-Polish-Notation&quot;&gt;&lt;a href=&quot;#Reverse-Polish-Notation&quot; class=&quot;headerlink&quot; title=&quot;Reverse Polish Notation&quot;&gt;&lt;/a&gt;Reverse Polish Notation&lt;/h2&gt;&lt;p&gt;Reverse Polish Notation (RPN) also called postfix notation.&lt;br&gt;Which which operators follow their operands and does not need any parentheses.&lt;br&gt;For example, &lt;code&gt;3 * (10 + 5)&lt;/code&gt; in RPN is &lt;code&gt;3 10 5 + *&lt;/code&gt; as above.&lt;/p&gt;
+&lt;p&gt;How do we write an evaluate function?&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Binary Tree Traversal</title>
+    <link href="http://andrewliang25.github.io/2022/09/29/Binary-Tree-Traversal/"/>
+    <id>http://andrewliang25.github.io/2022/09/29/Binary-Tree-Traversal/</id>
+    <published>2022-09-29T16:12:29.000Z</published>
+    <updated>2024-02-19T13:45:13.379Z</updated>
+    
+    
+    <summary type="html">&lt;img src=&quot;/2022/09/29/Binary-Tree-Traversal/binary-tree-example.png&quot; class=&quot;&quot; title=&quot;Binary Tree Example&quot;&gt;
+
+&lt;p&gt;Traversal means to go through all node on tree.&lt;/p&gt;
+&lt;p&gt;The most intuitive way in my mind is level-order way:&lt;br&gt;Print all node on root level from left to right, and then its child level, and so on.&lt;br&gt;Level order of example graph is &lt;code&gt;0 1 2 3 4 5 6 7 8&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;But how about depth-first way?&lt;br&gt;There are 3 actions when we move on a tree node:&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>RESTful API Brief Introduction</title>
+    <link href="http://andrewliang25.github.io/2022/09/01/RESTful-API-Brief-Intro/"/>
+    <id>http://andrewliang25.github.io/2022/09/01/RESTful-API-Brief-Intro/</id>
+    <published>2022-09-01T10:51:37.000Z</published>
+    <updated>2024-02-19T13:45:13.407Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Representational State Transfer (REST) architectural style has been first presented in 2000 in dissertation &lt;em&gt;Architectural Styles and the Design of Network-based Software Architectures&lt;/em&gt; by Roy Fielding.&lt;br&gt;Which introduced and elaborated the REST architectural style for distributed hypermedia systems.&lt;br&gt;He is also one of the principal authors of HTTP/1.1 specification.&lt;/p&gt;
+&lt;img src=&quot;/2022/09/01/RESTful-API-Brief-Intro/Roy-Fielding.jpg&quot; class=&quot;&quot; title=&quot;Roy Fielding&quot;&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>C# Exception Behavior</title>
+    <link href="http://andrewliang25.github.io/2022/06/29/Csharp-Exception-Behavior/"/>
+    <id>http://andrewliang25.github.io/2022/06/29/Csharp-Exception-Behavior/</id>
+    <published>2022-06-29T15:04:02.000Z</published>
+    <updated>2024-02-19T13:45:13.403Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;As a programmer, we can see &lt;strong&gt;&lt;em&gt;a lot of&lt;/em&gt;&lt;/strong&gt; &lt;em&gt;try-catch patterns&lt;/em&gt; in the legacy code.&lt;/p&gt;
+&lt;p&gt;But sometimes exception messages cannot precisely point out where the error occured.&lt;/p&gt;
+&lt;p&gt;And this is how C# Exception behaves.&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Share New Blog Article on LinkedIn via Zapier</title>
+    <link href="http://andrewliang25.github.io/2021/12/25/Share-New-Blog-Article-on-LinkedIn-via-Zapier/"/>
+    <id>http://andrewliang25.github.io/2021/12/25/Share-New-Blog-Article-on-LinkedIn-via-Zapier/</id>
+    <published>2021-12-25T21:01:30.000Z</published>
+    <updated>2024-02-19T13:45:13.419Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;Add-RSS-in-your-site&quot;&gt;&lt;a href=&quot;#Add-RSS-in-your-site&quot; class=&quot;headerlink&quot; title=&quot;Add RSS in your site&quot;&gt;&lt;/a&gt;Add RSS in your site&lt;/h2&gt;&lt;p&gt;Install hexo generator feed:&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;npm install hexo-generator-feed --save&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;Put the plugin in &lt;code&gt;_config.yml&lt;/code&gt;:&lt;/p&gt;
+&lt;figure class=&quot;highlight yaml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;feed:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;attr&quot;&gt;enable:&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;attr&quot;&gt;type:&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;atom&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;attr&quot;&gt;path:&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;atom.xml&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;attr&quot;&gt;limit:&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;20&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;attr&quot;&gt;hub:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;attr&quot;&gt;content:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;attr&quot;&gt;content_limit:&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;140&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;attr&quot;&gt;content_limit_delim:&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;#x27; &amp;#x27;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;attr&quot;&gt;order_by:&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;-date&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;attr&quot;&gt;icon:&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;icon.png&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;attr&quot;&gt;autodiscovery:&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;attr&quot;&gt;template:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Rooting Deivce with Magisk</title>
+    <link href="http://andrewliang25.github.io/2021/12/20/Rooting-Deivce-with-Magisk/"/>
+    <id>http://andrewliang25.github.io/2021/12/20/Rooting-Deivce-with-Magisk/</id>
+    <published>2021-12-20T22:55:41.000Z</published>
+    <updated>2024-02-19T13:45:13.411Z</updated>
+    
+    
+    <summary type="html">&lt;img src=&quot;/2021/12/20/Rooting-Deivce-with-Magisk/Magisk_Logo.png&quot; class=&quot;&quot; title=&quot;Magisk&quot;&gt;
+
+&lt;p&gt;Magisk is a systemless rooting system.&lt;br&gt;Which was developed by Topjohnwu and launched in the year 2016, and since then has been widening its horizons with each passing year.&lt;br&gt;Magisk Root is a boon especially when it comes to running the financial applications.&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Install-Arrow-OS-on-Redmi-K40</title>
+    <link href="http://andrewliang25.github.io/2021/12/19/Install-Arrow-OS-on-Redmi-K40/"/>
+    <id>http://andrewliang25.github.io/2021/12/19/Install-Arrow-OS-on-Redmi-K40/</id>
+    <published>2021-12-19T20:34:27.000Z</published>
+    <updated>2024-02-19T13:45:13.407Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;This tutorial is mainly for Xiaomi Poco F3 / Xiaomi Mi 11X / Redmi K40.&lt;br&gt;If your phone is not the model above, you will need the ROM that fit the device.&lt;br&gt;But main steps still remain same.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;⚠ This may wipe out all personal data in the device, so backup! ⚠&lt;/strong&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>C# String - things you may not know</title>
+    <link href="http://andrewliang25.github.io/2021/12/10/Csharp-String-things-you-may-not-know/"/>
+    <id>http://andrewliang25.github.io/2021/12/10/Csharp-String-things-you-may-not-know/</id>
+    <published>2021-12-10T23:17:43.000Z</published>
+    <updated>2024-02-19T13:45:13.403Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;We use &lt;code&gt;string&lt;/code&gt; very often in programming. &lt;code&gt;&amp;quot;A&amp;quot; + &amp;quot;B&amp;quot;&lt;/code&gt;, such things like this.&lt;br&gt;But have you ever think about that is &lt;code&gt;string&lt;/code&gt; maybe not value type?&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Cannot Boot after Insert new M.2 SSD Debugging</title>
+    <link href="http://andrewliang25.github.io/2021/10/14/Cannot-Boot-after-Insert-new-M-2-SSD-Debugging/"/>
+    <id>http://andrewliang25.github.io/2021/10/14/Cannot-Boot-after-Insert-new-M-2-SSD-Debugging/</id>
+    <published>2021-10-14T15:54:00.000Z</published>
+    <updated>2024-02-19T13:45:13.379Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Just record what I thought and how I debug.&lt;/p&gt;
+&lt;h2 id=&quot;Situation&quot;&gt;&lt;a href=&quot;#Situation&quot; class=&quot;headerlink&quot; title=&quot;Situation&quot;&gt;&lt;/a&gt;Situation&lt;/h2&gt;&lt;p&gt;The device kept showing &lt;code&gt;Reboot and Select proper Boot device&lt;/code&gt; after I added a M.2 SSD.&lt;br&gt;It was totally fine before that.&lt;/p&gt;
+&lt;h2 id=&quot;Conclucion&quot;&gt;&lt;a href=&quot;#Conclucion&quot; class=&quot;headerlink&quot; title=&quot;Conclucion&quot;&gt;&lt;/a&gt;Conclucion&lt;/h2&gt;&lt;p&gt;Make sure M.2 slot does not conflict with SATA ports. Check it with motherboard manual.&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Add Disqus Comment Box on Hexo</title>
+    <link href="http://andrewliang25.github.io/2021/09/24/Add-Disqus-Comment-Box-on-Hexo/"/>
+    <id>http://andrewliang25.github.io/2021/09/24/Add-Disqus-Comment-Box-on-Hexo/</id>
+    <published>2021-09-24T14:35:00.000Z</published>
+    <updated>2024-02-19T13:45:13.367Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;Prologue&quot;&gt;&lt;a href=&quot;#Prologue&quot; class=&quot;headerlink&quot; title=&quot;Prologue&quot;&gt;&lt;/a&gt;Prologue&lt;/h2&gt;&lt;p&gt;Disqus is a global comment system that improves discussion on websites and connects conversations across the web.&lt;/p&gt;
+&lt;h2 id=&quot;Create-Site&quot;&gt;&lt;a href=&quot;#Create-Site&quot; class=&quot;headerlink&quot; title=&quot;Create Site&quot;&gt;&lt;/a&gt;Create Site&lt;/h2&gt;&lt;p&gt;Create an account and log into &lt;a href=&quot;https://disqus.com/&quot; title=&quot;&quot; target=&quot;&quot;&gt;Disqus&lt;/a&gt;. Once logged in, click the &lt;code&gt;GET STARTED&lt;/code&gt; button on the homepage.&lt;/p&gt;
+&lt;img src=&quot;/2021/09/24/Add-Disqus-Comment-Box-on-Hexo/DisqusGetStarted.png&quot; class=&quot;&quot; title=&quot;GET STARTED&quot;&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>TFVC vs Git - Which version control system should I choose?</title>
+    <link href="http://andrewliang25.github.io/2021/09/17/TFS-vs-Git/"/>
+    <id>http://andrewliang25.github.io/2021/09/17/TFS-vs-Git/</id>
+    <published>2021-09-17T13:30:44.000Z</published>
+    <updated>2024-02-19T13:45:13.419Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;Prologue&quot;&gt;&lt;a href=&quot;#Prologue&quot; class=&quot;headerlink&quot; title=&quot;Prologue&quot;&gt;&lt;/a&gt;Prologue&lt;/h2&gt;&lt;p&gt;Initially, TFS supported only TFVC, and support for Git as a source code repository was added later in TFS 2013. Also, Microsoft suggest user to use Git: “Git is the default version control provider for new projects. You should use Git for version control in your projects unless you have a specific need for centralized version control features in TFVC.”&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Browser Force https</title>
+    <link href="http://andrewliang25.github.io/2021/09/13/Browser-Force-https/"/>
+    <id>http://andrewliang25.github.io/2021/09/13/Browser-Force-https/</id>
+    <published>2021-09-13T11:51:10.000Z</published>
+    <updated>2024-02-19T13:45:13.379Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;Prologue&quot;&gt;&lt;a href=&quot;#Prologue&quot; class=&quot;headerlink&quot; title=&quot;Prologue&quot;&gt;&lt;/a&gt;Prologue&lt;/h2&gt;&lt;p&gt;As a web developer, it is common to use localhost to preview the blog.&lt;br&gt;But still something weird came up: browser forcing the path go https.&lt;br&gt;This article just record how to get rid of it.&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Brief Intro to Binary Tree, Binary Search Tree, and Balanced BST</title>
+    <link href="http://andrewliang25.github.io/2021/03/16/BST/"/>
+    <id>http://andrewliang25.github.io/2021/03/16/BST/</id>
+    <published>2021-03-16T20:31:15.000Z</published>
+    <updated>2024-02-19T13:45:13.375Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;Bianry-Tree&quot;&gt;&lt;a href=&quot;#Bianry-Tree&quot; class=&quot;headerlink&quot; title=&quot;Bianry Tree&quot;&gt;&lt;/a&gt;Bianry Tree&lt;/h2&gt;&lt;p&gt;Binary tree is a tree data structure. Each node has at most two children, the left child and the right child.&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// JavaScript&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// Definition for a binary tree node&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;TreeNode&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;key, left, right&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;this&lt;/span&gt;.key = (key===&lt;span class=&quot;literal&quot;&gt;undefined&lt;/span&gt; ? &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; : key)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;this&lt;/span&gt;.left = (left===&lt;span class=&quot;literal&quot;&gt;undefined&lt;/span&gt; ? &lt;span class=&quot;literal&quot;&gt;null&lt;/span&gt; : left)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;this&lt;/span&gt;.right = (right===&lt;span class=&quot;literal&quot;&gt;undefined&lt;/span&gt; ? &lt;span class=&quot;literal&quot;&gt;null&lt;/span&gt; : right)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>SEO(Search Engine Optimization) on Hexo NexT</title>
+    <link href="http://andrewliang25.github.io/2020/07/14/SEO-hexo-next/"/>
+    <id>http://andrewliang25.github.io/2020/07/14/SEO-hexo-next/</id>
+    <published>2020-07-14T18:40:06.000Z</published>
+    <updated>2024-02-19T13:45:13.415Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;Google-Search-Console&quot;&gt;&lt;a href=&quot;#Google-Search-Console&quot; class=&quot;headerlink&quot; title=&quot;Google Search Console&quot;&gt;&lt;/a&gt;Google Search Console&lt;/h2&gt;&lt;p&gt;Go to &lt;a href=&quot;https://search.google.com/search-console/welcome&quot; title=&quot;&quot; target=&quot;&quot;&gt;Google Search Console&lt;/a&gt; and add property.&lt;/p&gt;
+&lt;img src=&quot;/2020/07/14/SEO-hexo-next/search_console_new_property.png&quot; class=&quot;&quot; title=&quot;Enter blog URL under URL prefix&quot;&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+</feed>
